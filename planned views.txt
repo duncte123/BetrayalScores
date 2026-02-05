@@ -3,3 +3,4 @@
 - copyright & license view
 
 death rules:
+- when a single score hits 0 you die :D
