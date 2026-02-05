@@ -1,0 +1,5 @@
+- select character view
+- character view
+- copyright & license view
+
+death rules:
