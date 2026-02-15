@@ -175,6 +175,68 @@ val characters = listOf(
         ),
     ),
     Character(
+        0xD2B349,
+        "Jaden Jones",
+        11,
+        "October 4",
+        "mysteries, reading",
+        "Cases solved",
+        "0",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 3, 4, 4, 4, 5, 6, 7, 8),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 2, 3, 3, 3, 4, 5, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 3, 3, 4, 5, 5, 6, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 3, 3, 4, 5, 5, 6, 7, 8),
+                3
+            ),
+        ),
+    ),
+    Character(
+        0xC7433F,
+        """Josef "Brosef" Hooper""",
+        25,
+        "February 25",
+        "poetry, soccer", // Yeah, I wanna see how many people complain about this LMAO
+        "GPA",
+        "2.5",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 2, 3, 4, 5, 6, 7, 8),
+                4
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 4, 4, 4, 5, 6, 7, 8, 8),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 2, 2, 3, 3, 5, 5, 6, 6),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 3, 4, 4, 5, 5, 6, 6),
+                3
+            ),
+        ),
+    ),
+    Character(
         0x0,
         "",
         12,
