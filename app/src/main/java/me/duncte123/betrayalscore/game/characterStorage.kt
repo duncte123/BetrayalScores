@@ -237,33 +237,157 @@ val characters = listOf(
         ),
     ),
     Character(
-        0x0,
-        "",
-        12,
-        "",
-        "",
-        "",
-        "",
+        0xC54A79,
+        "Michelle Monroe",
+        19,
+        "August 19",
+        "lacrosse, traveling",
+        "State champion trophies",
+        "2",
         listOf(
             Statistic(
                 StatType.SPEED,
-                listOf(0, 2, 3, 4, 4, 5, 6, 7, 8),
+                listOf(0, 3, 3, 4, 5, 6, 6, 7, 8),
                 3
             ),
             Statistic(
                 StatType.MIGHT,
-                listOf(0, 2, 2, 3, 4, 4, 5, 6, 7),
-                4
+                listOf(0, 2, 3, 4, 4, 5, 6, 7, 8),
+                5
             ),
             Statistic(
                 StatType.KNOWLEDGE,
-                listOf(0, 4, 4, 5, 5, 6, 7, 8, 8),
+                listOf(0, 2, 3, 3, 4, 5, 6, 7, 8),
                 4
             ),
             Statistic(
                 StatType.SANITY,
-                listOf(0, 2, 2, 3, 4, 5, 5, 6, 6),
+                listOf(0, 2, 3, 3, 4, 5, 6, 6, 6),
                 3
+            ),
+        ),
+    ),
+    Character(
+        0xC7433F,
+        "Oliver Swift",
+        33,
+        "July 3",
+        "philosophy, running",
+        "Mile Time",
+        "4:54.72",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 3, 3, 4, 5, 5, 6, 7, 8),
+                4
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 3, 3, 4, 4, 5, 6, 6, 7),
+                3
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 3, 3, 3, 4, 5, 6, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 3, 3, 4, 5, 5, 6, 7),
+                3
+            ),
+        ),
+    ),
+    Character(
+        0x7B8EB8,
+        "Persephone Puleri",
+        49,
+        "April 15",
+        "camping, fragrances",
+        "Years in business",
+        "15",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 3, 3, 4, 4, 5, 6, 7, 8),
+                4
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 3, 3, 4, 5, 6, 6, 7, 7),
+                3
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 2, 3, 3, 4, 5, 6, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 3, 3, 4, 5, 6, 7, 8, 8),
+                4
+            ),
+        ),
+    ),
+    Character(
+        0xD2B349,
+        "Sammy Angler",
+        9,
+        "September 18",
+        "magic tricks, video games",
+        "Arcade high score",
+        "2,433,221",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 4, 4, 5, 6, 7, 8),
+                5
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 3, 3, 4, 4, 5, 5, 6, 8),
+                3
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 2, 3, 3, 4, 5, 6, 7, 8),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 3, 4, 4, 5, 6, 6, 7),
+                4
+            ),
+        ),
+    ),
+    Character(
+        0x7B8EB8,
+        "Stephanie Richter",
+        40,
+        "January 12",
+        "photography, cooking",
+        "Film credits",
+        "4 (as an extra)",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 3, 4, 4, 6, 6, 7),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 2, 3, 3, 4, 5, 5, 6, 6),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 2, 3, 4, 4, 4, 5, 6, 6),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 4, 4, 5, 5, 6, 7, 8, 8),
+                4
             ),
         ),
     ),
