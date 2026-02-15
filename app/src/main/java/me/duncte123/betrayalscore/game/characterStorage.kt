@@ -48,5 +48,65 @@ val characters = listOf(
                 3
             ),
         ),
-    )
+    ),
+    Character(
+        """Brittani "Beat Box" Bowen""",
+        22,
+        "December 1",
+        "dancing, gardening",
+        "Current favourite genre",
+        "dungeon synth",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 3, 4, 4, 5, 6, 6),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 3, 3, 4, 5, 6, 7, 7, 8),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 3, 3, 4, 5, 5, 6, 6, 7),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 3, 3, 4, 4, 5, 6, 6, 7),
+                4
+            ),
+        ),
+    ),
+    Character(
+        "",
+        12,
+        "",
+        "",
+        "",
+        "",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 4, 4, 5, 6, 7, 8),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 2, 2, 3, 4, 4, 5, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 4, 4, 5, 5, 6, 7, 8, 8),
+                4
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 2, 3, 4, 5, 5, 6, 6),
+                3
+            ),
+        ),
+    ),
 )
