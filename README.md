@@ -2,6 +2,6 @@
 
 (title is just a joke)
 
-All characters etc probably owned by hasbro, idk, I just asked a friend of mine to take pictures of the character cards.
+All characters etc owned by hasbro, I just asked a friend of mine to take pictures of the character cards.
 
-I wanted to make this app because I was bored lmao
+I wanted to make this app because I was bored lmao, pls don't sue me :)

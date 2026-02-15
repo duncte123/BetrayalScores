@@ -20,6 +20,7 @@ package me.duncte123.betrayalscore.game
 
 val characters = listOf(
     Character(
+        0xF1B20F,
         "Anita Hernandez",
         12,
         "June 11",
@@ -50,6 +51,7 @@ val characters = listOf(
         ),
     ),
     Character(
+        0xC54A79,
         """Brittani "Beat Box" Bowen""",
         22,
         "December 1",
@@ -80,6 +82,100 @@ val characters = listOf(
         ),
     ),
     Character(
+        0xFFFFFF,
+        "Dan Nguyen, M.D.",
+        60,
+        "May 6",
+        "documentaries, fishing",
+        "Blood type",
+        "A-",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 3, 4, 5, 6, 7, 7),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 3, 3, 4, 4, 5, 5, 6, 7),
+                3
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 3, 3, 4, 5, 5, 6, 7, 8),
+                5
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 3, 4, 4, 5, 6, 7, 8),
+                4
+            ),
+        ),
+    ),
+    Character(
+        0xFFFFFF,
+        "Father Warren Leung",
+        71,
+        "November 17",
+        "watercolors, comic books",
+        "Boxes of comics in his basement",
+        "13",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 2, 3, 4, 4, 5, 5, 6, 6),
+                3
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 2, 2, 3, 3, 4, 5, 6, 6),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 3, 3, 4, 5, 5, 6, 7, 8),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 3, 3, 3, 4, 5, 6, 7, 8),
+                5
+            ),
+        ),
+    ),
+    Character(
+        0xF1B20F,
+        "Isa Valencia",
+        11,
+        "March 30",
+        "depressing music, blogging",
+        "Poe collections owned",
+        "8",
+        listOf(
+            Statistic(
+                StatType.SPEED,
+                listOf(0, 4, 4, 5, 5, 6, 7, 8, 8),
+                4
+            ),
+            Statistic(
+                StatType.MIGHT,
+                listOf(0, 2, 3, 3, 3, 4, 5, 6, 7),
+                4
+            ),
+            Statistic(
+                StatType.KNOWLEDGE,
+                listOf(0, 2, 3, 4, 4, 5, 6, 6, 6),
+                3
+            ),
+            Statistic(
+                StatType.SANITY,
+                listOf(0, 2, 3, 4, 5, 6, 7, 7, 8),
+                3
+            ),
+        ),
+    ),
+    Character(
+        0x0,
         "",
         12,
         "",
