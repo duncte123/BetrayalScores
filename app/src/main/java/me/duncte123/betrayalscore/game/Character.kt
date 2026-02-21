@@ -19,7 +19,7 @@
 package me.duncte123.betrayalscore.game
 
 data class Character(
-    val color: Int,
+    val color: Long,
     val name: String,
     val age: Int,
     val birthday: String, // hehe fuck everything, this makes sense

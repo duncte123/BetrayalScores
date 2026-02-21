@@ -20,7 +20,7 @@ package me.duncte123.betrayalscore.game
 
 val characters = listOf(
     Character(
-        0xF1B20F,
+        0xFFF1B20F,
         "Anita Hernandez",
         12,
         "June 11",
@@ -51,7 +51,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xC54A79,
+        0xFFC54A79,
         """Brittani "Beat Box" Bowen""",
         22,
         "December 1",
@@ -82,7 +82,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xFFFFFF,
+        0xFFFFFFFF,
         "Dan Nguyen, M.D.",
         60,
         "May 6",
@@ -113,7 +113,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xFFFFFF,
+        0xFFFFFFFF,
         "Father Warren Leung",
         71,
         "November 17",
@@ -144,7 +144,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xF1B20F,
+        0xFFF1B20F,
         "Isa Valencia",
         11,
         "March 30",
@@ -175,7 +175,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xD2B349,
+        0xFFD2B349,
         "Jaden Jones",
         11,
         "October 4",
@@ -206,7 +206,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xC7433F,
+        0xFFC7433F,
         """Josef "Brosef" Hooper""",
         25,
         "February 25",
@@ -237,7 +237,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xC54A79,
+        0xFFC54A79,
         "Michelle Monroe",
         19,
         "August 19",
@@ -268,7 +268,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xC7433F,
+        0xFFC7433F,
         "Oliver Swift",
         33,
         "July 3",
@@ -299,7 +299,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0x7B8EB8,
+        0xFF7B8EB8,
         "Persephone Puleri",
         49,
         "April 15",
@@ -330,7 +330,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0xD2B349,
+        0xFFD2B349,
         "Sammy Angler",
         9,
         "September 18",
@@ -361,7 +361,7 @@ val characters = listOf(
         ),
     ),
     Character(
-        0x7B8EB8,
+        0xFF7B8EB8,
         "Stephanie Richter",
         40,
         "January 12",
