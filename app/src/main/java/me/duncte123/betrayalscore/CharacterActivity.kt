@@ -15,11 +15,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache
-import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asComposePath
+import androidx.compose.ui.graphics.drawscope.rotate
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.graphics.shapes.RoundedPolygon
 import androidx.graphics.shapes.toPath
@@ -45,17 +46,9 @@ class CharacterActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting3(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Composable
 fun CharacterPolygonBackground(character: Character, modifier: Modifier = Modifier) {
     Box(
-        modifier = modifier.rotate(-90f).background(Color.Green).drawWithCache {
+        modifier = modifier.background(Color.Green.copy(alpha = 0.5f)).drawWithCache {
             val blackPolygon = RoundedPolygon(
                 numVertices = 5,
                 radius = size.minDimension / 2.25f,
@@ -74,13 +67,37 @@ fun CharacterPolygonBackground(character: Character, modifier: Modifier = Modifi
             val blackPolygonCompose = blackPolygon.toPath().asComposePath()
             val characterBorderCompose = characterBorder.toPath().asComposePath()
             onDrawBehind {
-                drawPath(characterBorderCompose, color = Color(character.color))
-                drawPath(blackPolygonCompose, color = Color.Black)
+                rotate(-90f) {
+                    drawPath(characterBorderCompose, color = Color(character.color))
+                    drawPath(blackPolygonCompose, color = Color.Black)
+                }
             }
         }
             .fillMaxWidth()
-            .fillMaxHeight(.5f)
-    )
+            .fillMaxHeight(.5f),
+        contentAlignment = Alignment.Center
+    ) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = character.name,
+                color = Color.White,
+            )
+            Text(
+                text = "Age: ${character.age}  Birthday: ${character.birthday}",
+                color = Color.White,
+            )
+            Text(
+                text = "Hobbies: ${character.hobbies}",
+                color = Color.White,
+            )
+            Text(
+                text = "${character.extraHeading}: ${character.extraContent}",
+                color = Color.White,
+            )
+        }
+    }
 }
 
 @Composable
@@ -95,9 +112,12 @@ fun CharacterDisplay(character: Character, modifier: Modifier = Modifier) {
             Box(
                 modifier = Modifier.fillMaxHeight(.9f)
                     .fillMaxWidth()
-                    .background(Color.Red)
             ) {
-                Text(color = Color.White, text = character.name)
+                Column {
+                    for (stat in character.statistics) {
+                        Text(color = Color.Black, text = "${stat.type.name} -> default: ${stat.scoreMap[stat.defaultScoreIndex]}")
+                    }
+                }
             }
         }
     }
