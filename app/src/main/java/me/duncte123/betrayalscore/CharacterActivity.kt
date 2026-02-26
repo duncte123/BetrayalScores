@@ -13,8 +13,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawWithCache
@@ -107,13 +113,23 @@ fun CharacterDisplay(character: Character, modifier: Modifier = Modifier) {
             CharacterPolygonBackground(character)
         }
 
-        Row (modifier = Modifier.fillMaxHeight()
-            .fillMaxHeight()) {
+        Row (modifier = Modifier.fillMaxWidth().fillMaxHeight()) {
             Box(
-                modifier = Modifier.fillMaxHeight(.9f)
-                    .fillMaxWidth()
+                modifier = Modifier.fillMaxHeight(.9f).fillMaxWidth()
             ) {
                 Column {
+                    // this is a fucking nasty hack lmao, but at least it seems to consistently give me whole values
+                    var sliderPosition by remember { mutableIntStateOf(0) }
+
+                    Slider(
+                        value = sliderPosition.toFloat(),
+                        onValueChange = { sliderPosition = it.toInt() },
+                        steps = 6,
+                        valueRange = 0f..7.5f
+                    )
+
+                    Text(text = sliderPosition.toString())
+
                     for (stat in character.statistics) {
                         Text(color = Color.Black, text = "${stat.type.name} -> default: ${stat.scoreMap[stat.defaultScoreIndex]}")
                     }
