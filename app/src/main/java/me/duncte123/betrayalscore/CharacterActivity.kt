@@ -5,15 +5,20 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Slider
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -26,10 +31,13 @@ import androidx.compose.ui.draw.drawWithCache
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asComposePath
 import androidx.compose.ui.graphics.drawscope.rotate
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.graphics.shapes.RoundedPolygon
 import androidx.graphics.shapes.toPath
 import me.duncte123.betrayalscore.game.Character
+import me.duncte123.betrayalscore.game.Statistic
 import me.duncte123.betrayalscore.game.characters
 import me.duncte123.betrayalscore.ui.theme.BetrayalScoreTheme
 
@@ -105,6 +113,45 @@ fun CharacterPolygonBackground(character: Character, modifier: Modifier = Modifi
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun StatisticSlider(stat: Statistic) {
+    var sliderPosition by remember { mutableIntStateOf(stat.defaultScoreIndex) }
+
+    val points = stat.scoreMap.map { if (it == 0) "☠\uFE0F" else it.toString() }
+
+    Text(text = "${stat.type}: $sliderPosition")
+
+    Box(
+        modifier = Modifier.padding(start = 10.dp, end = 10.dp),
+    ) {
+        Column(
+            modifier = Modifier,
+        ) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(bottom = 5.dp),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                for ((idx, point) in points.withIndex()) {
+                    Text(
+                        modifier = Modifier.padding(0.dp).width(20.dp),
+                        text = point,
+                        textAlign = TextAlign.Center,
+                        color = if (idx == 1) Color.Red else if (idx == stat.defaultScoreIndex) Color.Green else Color.Black
+                    )
+                }
+            }
+
+            Slider(
+                value = sliderPosition.toFloat(),
+                onValueChange = { sliderPosition = it.toInt() },
+                steps = 7,
+                valueRange = 0f..8.5f,
+            )
+        }
+    }
+}
+
 @Composable
 fun CharacterDisplay(character: Character, modifier: Modifier = Modifier) {
     Column(modifier = modifier.fillMaxHeight()) {
@@ -114,23 +161,13 @@ fun CharacterDisplay(character: Character, modifier: Modifier = Modifier) {
 
         Row (modifier = Modifier.fillMaxWidth().fillMaxHeight()) {
             Box(
-                modifier = Modifier.fillMaxHeight(.9f).fillMaxWidth()
+                modifier = Modifier.fillMaxHeight().fillMaxWidth()
             ) {
                 Column {
                     // this is a fucking nasty hack lmao, but at least it seems to consistently give me whole values
-                    var sliderPosition by remember { mutableIntStateOf(0) }
-
-                    Slider(
-                        value = sliderPosition.toFloat(),
-                        onValueChange = { sliderPosition = it.toInt() },
-                        steps = 6,
-                        valueRange = 0f..7.5f
-                    )
-
-                    Text(text = sliderPosition.toString())
-
                     for (stat in character.statistics) {
-                        Text(color = Color.Black, text = "${stat.type.name} -> default: ${stat.scoreMap[stat.defaultScoreIndex]}")
+//                        Text(color = Color.Black, text = "${stat.type.name} -> default: ${stat.scoreMap[stat.defaultScoreIndex]}")
+                        StatisticSlider(stat)
                     }
                 }
             }
